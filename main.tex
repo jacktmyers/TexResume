@@ -21,6 +21,8 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage{enumitem}
+\usepackage{MnSymbol}
 
 %----------------------------------------------------------------------------------------
 
@@ -35,47 +37,140 @@
 	
 	% If your name is very short, use just one of the lines below
 	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Jack}}}}} % First name
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Jack Myers}}}}} % First name
 	
-	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Myers}}}}} % Last name
+	% \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Myers}}}}} % Last name
 	
 	\vspace{6pt}
 	
-	{\huge Web App Architect} % Career or current job title
+	{\huge Computer Engineer} % Career or current job title
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+\begin{minipage}[t]{0.25\textwidth} % 27.5% of the page width for the first row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{MapMarker}{12}{Black Mesa East}\\
-	\icon{Phone}{12}{+1 123 456 789}\\
-	\icon{At}{12}{\href{mailto:alyx@vance.me}{alyx@vance.me}}\\	
+	\icon{MapMarker}{12}{Bloomingtion, IN}\\
+	\icon{Phone}{12}{+1 317 205 5391}\\
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+\begin{minipage}[t]{0.3\textwidth} % 27.5% of the page width for the second row of icons
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 	
 	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{Globe}{12}{\href{https://alyx.vance.me}{alyx.vance.me}}\\
-	\icon{Github}{12}{\href{https://github.com/alyxvance}{github.com/alyxvance}}\\
-	\icon{Twitter}{12}{\href{https://twitter.com/@alyxvance}{@alyxvance}}\\
+	\icon{Globe}{12}{\href{https://www.jacktmyers.com}{www.jacktmyers.com}}\\
+	\icon{Github}{12}{\href{https://github.com/jacktmyers}{github.com/jacktmyers}}\\
+	\icon{At}{12}{\href{mailto:jthomasmmail@gmail.com}{jthomasmmail@gmail.com}}\\	
 \end{minipage}
 
-\vspace{0.5cm}
+\vspace{-0.5cm}
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
-\cvsect{Who Am I?}
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+\cvsect{Professional Experience}
+
+\begin{entrylist}
+	\entry
+		{07/\textbf{23} -- Present}
+		{Civilian Computer Engineer}
+		{Naval Surface Warfare Center, Crane}
+		{Vehicular Software Systems Integration Branch
+			\begin{itemize}[noitemsep,topsep=0pt]
+			\setlength\itemsep{0pt}
+			\item[$\ast$] Researched, created, documented, and presented augmented reality assistant prototype
+			\item[$\ast$] Developed and maintained applications for deployment on electronic maintenance systems
+			\item[$\ast$] Developed and iterated internal asset tracking software using agile development practices
+			\item[$\ast$] Holding secret level security clearance
+		\end{itemize}
+			\texttt{.NET}\slashsep\texttt{MVC}\slashsep\texttt{C\#}\slashsep\texttt{Unity}\slashsep
+			\texttt{Vue}\slashsep\texttt{JS}\slashsep\texttt{Web Scraping}\slashsep\texttt{Git}
+	}
+	\entry
+		{05/\textbf{22} -- 09/\textbf{22}}
+		{Software Development Intern}
+		{Scientia LLC}
+		{Ground Based Operational Surveillance Systems (GBOSS) Department of Defense Contract
+			\begin{itemize}[noitemsep,topsep=0pt]
+				\setlength\itemsep{0pt}
+				\item[$\ast$] Built light-weight frontend for sensor management on headless system
+				\item[$\ast$] Collaborated, and implemented camera control driver for linux based operating system
+			\end{itemize}
+			\texttt{Java}\slashsep\texttt{JS}\slashsep\texttt{NodeJS}
+		}
+	\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\vspace{-0.5cm}
+
+\cvsect{Education}
+
+\begin{entrylist}
+	\entry
+		{08/\textbf{19} -- 05/\textbf{23}}
+		{BS in Computer Engineering}
+		{Purdue University, West Lafayette}
+		{
+			\textbf{Digital Systems Lab Teaching Assistant} -- \textit{4 Semesters}
+			\begin{itemize}[noitemsep,topsep=0pt]
+				\setlength\itemsep{0pt}
+				\item[$\ast$] Helped students create and debug logic circuits and hardware description code
+				\item[$\ast$] Retouched on lecture material and concepts when necessary
+			\end{itemize}
+			\texttt{SystemVerilog}\slashsep\texttt{Bread-boarding}\\
+			\textbf{Undergraduate Research} -- \textit{3 Semesters}
+			\begin{itemize}[noitemsep,topsep=0pt]
+				\setlength\itemsep{0pt}
+				\item[$\ast$] Led a team to build and finalize an automatic grading system used in advanced C course
+				\item[$\ast$] Researched the implementation of a fuzzer for advanced feedback on C assignments
+			\end{itemize}
+			\texttt{Python}\slashsep\texttt{Github API}\slashsep\texttt{AFL++}\slashsep\texttt{C}\\
+		\textbf{Dean's List, Semester Honors} - \textit{8 Semesters}
+		}
+\end{entrylist}
+
+
+\cvsect{\MakeUppercase{Projects}}
+
+\begin{minipage}[t]{0.47\textwidth} % 40% of the page width for the introduction text
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\lorem \lorem \lorem \lorem \lorem\\ % Dummy text
+	\textbf{R.A.C.H.E.L.}
+	\\
+	Electronic ping-pong table that responds to ball bounces, tracks score and changes as you play.
+	Comprised of a STM32 Microcontroller, piezoelectric microphone array, RGB camera, linux laptop and projector. I
+	worked on ball position detection, game logic, system communication, and user interface.
+	\\
+	\textbf{Awards:}
+	\begin{itemize}[noitemsep,topsep=0pt]
+		\setlength\itemsep{0pt}
+		\item[$\ast$] Spark Challenge 2022 First Place
+		\item[$\ast$] 2022-2023 Senior Design Award
+	\end{itemize}
 \end{minipage}
 \hfill % Whitespace between
+\begin{minipage}[t]{0.47\textwidth} % 40% of the page width for the introduction text
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	\textbf{R.A.C.H.E.L.}
+	\\
+	Electronic ping-pong table that responds to ball bounces, tracks score and changes as you play.
+	Comprised of a STM32 Microcontroller, piezoelectric microphone array, RGB camera, linux laptop and projector. I
+	worked on ball position detection, game logic, system communication, and user interface.
+	\\
+	\textbf{Awards:}
+	\begin{itemize}[noitemsep,topsep=0pt]
+		\setlength\itemsep{0pt}
+		\item[$\ast$] Spark Challenge 2022 First Place
+		\item[$\ast$] 2022-2023 Senior Design Award
+	\end{itemize}
+\end{minipage}
 \iffalse
 \begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
@@ -93,54 +188,6 @@
 \begin{center}
 	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
 \end{center}
-
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\cvsect{Experience}
-
-\begin{entrylist}
-	\entry
-		{2017 -- 3/2018}
-		{Front-end developer}
-		{Big Corporation Name Inc.}
-		{\lorem \lorem \lorem\\ \texttt{node.js}\slashsep\texttt{Vue.js}\slashsep\texttt{Electron}}
-	\entry
-		{2015 -- 2018\\\footnotesize{part time}}
-		{Full stack developer}
-		{Famous Eshop Inc.}
-		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{JS}\slashsep\texttt{MariaDB}\slashsep\texttt{Linux}}
-	\entry
-		{2013 -- 2014\\\footnotesize{part time}}
-		{Junior PHP Developer}
-		{example.com}
-		{\lorem\lorem\\ \texttt{PHP}\slashsep\texttt{Laravel}}
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\cvsect{Education}
-
-\begin{entrylist}
-	\entry
-		{2013 -- 2017}
-		{Master's Degree}
-		{Another University Name}
-		{\lorem\lorem\lorem}
-	\entry
-		{2014}
-		{Postgraduate Diploma}
-		{A University Name}
-		{\lorem\lorem}
-	\entry
-		{2007 -- 2013}
-		{Bachelor's Degree}
-		{A University Name}
-		{\lorem\lorem}
-\end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %	ADDITIONAL INFORMATION
