@@ -48,6 +48,8 @@
 
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
+\usepackage{listofitems}
+
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
 	top=1.75cm, % Top margin
@@ -203,4 +205,14 @@
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
+\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
+
+\newcommand{\ttlist}[1]{
+	\setsepchar{,}
+	\readlist\mylist{#1}
+	\texttt{\mylist[1]}%
+	\foreachitem\myitem\in\mylist{%
+		\ifnum\myitemcnt>1\relax\slashsep\texttt{\myitem}\fi	
+	}
+}
+
