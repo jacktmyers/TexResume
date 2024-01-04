@@ -205,7 +205,7 @@
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
+\newcommand{\slashsep}{\hspace{1mm}/\hspace{1mm}}
 
 \newcommand{\ttlist}[1]{
 	\setsepchar{,}
