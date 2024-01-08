@@ -23,6 +23,8 @@
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage{enumitem}
 \usepackage{MnSymbol}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 %----------------------------------------------------------------------------------------
 
@@ -64,6 +66,16 @@
 \end{minipage}
 
 \vspace{-\baselineskip}
+
+\cvsect{Objective Statement}
+
+%\vspace{-\standardspace}
+\begin{minipage}[t]{1\textwidth}
+	Hard-working, proven engineer and designer looking for a full-time position in a creative, and multi-disciplinary environment,
+	where I can contribute to a cause that I believe in and grow my skills as a collaborative problem solver.
+\end{minipage}
+
+%\vspace{-\baselineskip}
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION, SKILLS AND TECHNOLOGIES
@@ -126,10 +138,10 @@
 			\textbf{Undergraduate Research} -- \textit{3 Semesters}
 			\begin{itemize}[noitemsep,topsep=0pt]
 				\setlength\itemsep{0pt}
-				\item[$\ast$] Led a team to build and finalize an automatic grading system used in advanced C course
-				\item[$\ast$] Researched the implementation of a fuzzer for advanced feedback on C assignments
+				\item[$\ast$] Led a team to build, and deploy an automatic grading system for Purdue's advanced C course
+				\item[$\ast$] Researched the implementation of a fuzzer for automatic advanced feedback on C assignments
 			\end{itemize}
-		\textbf{Dean's List, Semester Honors} - \textit{8 Semesters}
+		\textbf{Dean's List} - \textit{8 Semesters}\slashsep\textbf{Semester Honors} - \textit{6 Semesters}\slashsep\textbf{GPA} - 3.66
 		}
 \end{entrylist}
 
@@ -171,15 +183,25 @@
 		\item[$\ast$] Collaborated with separate team to collect 3D scan data for object detection
 	\end{itemize}
 \end{minipage}
+\vspace{\baselineskip} % Required for vertically aligning minipages
 \begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
-	%\vspace{\baselineskip}
+	\vspace{\baselineskip}
 	\textbf{MIDI Polyphonic Synthesizer}
 	\hfill% Horizontal whitespace
 	{\footnotesize \textbf{\textcolor{black}{Purdue}}}
 	\\
 	A custom STM32 PCB that took in MIDI input and synthesized audio output using an DAC. Features
 	included 10 Simultaneous notes, 5 distinct voices, pitch bending, volume adjustment, note fading and an
-	OLED display
+	OLED display.
+\end{minipage}
+\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
+	%\vspace{\baselineskip}
+	\textbf{Graphics Toolkit}
+	\hfill% Horizontal whitespace
+	{\footnotesize \textbf{\textcolor{black}{Purdue \& Personal}}}
+	\\
+	A from-scratch complete graphics program with support for shadow maps, shaders,
+	billboard reflections, STL imports, as well as software and hardware rendering.
 \end{minipage}
 
 
@@ -190,7 +212,7 @@
 	\textbf{Languages:}\\
 	\ttlist{C++,C\#,C,Embedded C,JS,HTML,CSS,Python,Java,Bash,SystemVerilog,LaTeX}\\\\
 	\textbf{Frameworks/Libraries:}\\
-	\ttlist{Vue,MVC,.NET,NodeJS,OpenCV,Selenium}\\
+	\ttlist{Vue,MVC,.NET,NodeJS,OpenCV,Selenium,OpenGL}\\
 \end{minipage}
 \hfill
 \begin{minipage}[t]{.48\textwidth}
@@ -219,39 +241,25 @@
 \end{minipage}
 \fi
 
+\iffalse
 \begin{center}
 	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
 \end{center}
+\fi
 
 %----------------------------------------------------------------------------------------
 %	ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
+\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-	\cvsect{Languages}
-	
-	\textbf{English} - native\\
-	\textbf{German} - proficient\\
-	\textbf{Polish} - rudimentary
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
+\cvsect{\MakeUppercase{Hobbies}}
+
+\begin{minipage}[t]{1\textwidth}
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\cvsect{Hobbies}
-	
-	I love... \lorem
+	\ttlist{Climbing,Custom Linux Desktops,Dungeons \& Dragons,Snowboarding,Jewelry Making}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\cvsect{Non profit}
-	
-	I help... \lorem
-\end{minipage}
+
 
 %----------------------------------------------------------------------------------------
 
