@@ -67,13 +67,13 @@
 
 \vspace{-\baselineskip}
 
-\cvsect{Objective Statement}
+% \cvsect{Objective Statement}
 
-%\vspace{-\standardspace}
-\begin{minipage}[t]{1\textwidth}
-	Hard-working, proven engineer and designer looking for a full-time position in a creative, and multi-disciplinary environment,
-	where I can contribute to a cause that I believe in and grow my skills as a collaborative problem solver.
-\end{minipage}
+% %\vspace{-\standardspace}
+% \begin{minipage}[t]{1\textwidth}
+% 	Hard-working, proven engineer and designer looking for a full-time position in a creative, and multi-disciplinary environment,
+% 	where I can contribute to a cause that I believe in and grow my skills as a collaborative problem solver.
+% \end{minipage}
 
 %\vspace{-\baselineskip}
 
@@ -96,10 +96,11 @@
 		\begin{itemize}[noitemsep,topsep=0pt]
 			\setlength\itemsep{0pt}
 			\item[$\ast$] Holding secret level security clearance
-			\item[$\ast$] Developed and maintained applications for deployment on electronic maintenance systems
-			\item[$\ast$] Developed and iterated internal asset tracking software using agile development practices
-			\item[$\ast$] Wrote web scraping scripts to automate document collection and sorting
-			\item[$\ast$] Experimented with using local LLM for document summarization 
+			\item[$\ast$] Created applications for over 3000 devices used by Marines worldwide
+			\item[$\ast$] Leveraged agile software development strategies
+			\item[$\ast$] Prototyped and implemented on-device LLM and RAG for summarizing technical publications
+			\item[$\ast$] Wrote web scraping scripts to populate documents and metadata into a custom database
+			\item[$\ast$] Maintained and supported custom asset tracking web app
 		\end{itemize}
 	}
 	\entry
@@ -149,59 +150,74 @@
 
 \cvsect{\MakeUppercase{Projects}}
 
-\begin{minipage}[t]{0.48\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\textbf{R.A.C.H.E.L.}
-	\hfill% Horizontal whitespace
-	{\footnotesize \textbf{\textcolor{black}{Purdue}}}
-	\\
-	Electronic ping-pong table that responds to ball bounces, tracks score and changes as you play.
-	Comprised of a STM32 Microcontroller, piezoelectric microphone array, RGB camera, linux laptop and projector. I
-	worked on ball position detection, game logic, system communication, and user interface.
-	\\
-	\textbf{Awards:}
-	\begin{itemize}[noitemsep,topsep=0pt]
-		\setlength\itemsep{0pt}
-		\item[$\ast$] Spark Challenge 2022 First Place
-		\item[$\ast$] 2022-2023 Senior Design Award
-	\end{itemize}
+\begin{minipage}[t]{.50\textwidth}
+	\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
+		%\vspace{-\baselineskip} % Required for vertically aligning minipages
+		\textbf{R.A.C.H.E.L.}
+		\hfill% Horizontal whitespace
+		{\footnotesize \textbf{\textcolor{black}{Purdue}}}
+		\\
+		Electronic ping-pong table that responds to ball bounces, tracks score and changes as you play.
+		Comprised of a STM32 Microcontroller, piezoelectric microphone array, RGB camera, linux laptop and projector. I
+		worked on ball position detection, game logic, system communication, and user interface.
+		\\
+		\textbf{Awards:}
+		\begin{itemize}[noitemsep,topsep=0pt]
+			\setlength\itemsep{0pt}
+			\item[$\ast$] Spark Challenge 2022 First Place
+			\item[$\ast$] 2022-2023 Senior Design Award
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
+		\vspace{\baselineskip}
+		\textbf{MIDI Polyphonic Synthesizer}
+		\hfill% Horizontal whitespace
+		{\footnotesize \textbf{\textcolor{black}{Purdue}}}
+		\\
+		A custom STM32 PCB that took in MIDI input and synthesized audio output using an DAC. Features
+		included 10 Simultaneous notes, 5 distinct voices, pitch bending, volume adjustment, note fading and an
+		OLED display.
+	\end{minipage}
 \end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.48\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\textbf{Augmented Reality Training Demo}
+\hfill
+\begin{minipage}[t]{.46\textwidth} % 40% of the page width for the introduction text
+	%\vspace{-\baselineskip} % Required for vertically aligning minipages
+	\textbf{Augmented Reality Research}
 	\hfill% Horizontal whitespace
 	{\footnotesize \textbf{\textcolor{black}{NSWC Crane}}}
 	\\
-	HoloLens 2 application that provides Marines an interactive training experience with real hardware. 
-	Includes 3D object detection of	specific components, and automatic placement of virtual interfaces using QR codes.
+	\textit{Proof of Concept}
 	\begin{itemize}[noitemsep,topsep=0pt]
 		\setlength\itemsep{0pt}
-		\item[$\ast$] Researched, and assembled prototype
-		%\item[$\ast$] Documented process and results in technical white paper and presented it to a jury % This is for after presentation
-		\item[$\ast$] Documented process and results in technical white paper
-		\item[$\ast$] Collaborated with separate team to collect 3D scan data for object detection
+		\item[$\ast$] Collaborated to collect 3D scan data for object detection
+		\item[$\ast$] Supported both Hololens 2 and Magic Leap 2
+		\item[$\ast$] Communicated data to connected system over usb
+	\end{itemize}
+	\textit{Collaboration with Army and Navy}
+	\begin{itemize}[noitemsep,topsep=0pt]
+		\setlength\itemsep{0pt}
+		\item[$\ast$] Traveled and communicated at software test events
+		\item[$\ast$] Adapted Army application to leverage processing of a connected laptop
+	\end{itemize}
+	\textit{Communication}
+	\begin{itemize}[noitemsep,topsep=0pt]
+		\setlength\itemsep{0pt}
+		\item[$\ast$] Presented findings to customer to prove capability
+		\item[$\ast$] Presented to internal board of chief engineers 
+		\item[$\ast$] Created accompanying technical white paper
 	\end{itemize}
 \end{minipage}
-\vspace{\baselineskip} % Required for vertically aligning minipages
 \begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
 	\vspace{\baselineskip}
-	\textbf{MIDI Polyphonic Synthesizer}
-	\hfill% Horizontal whitespace
-	{\footnotesize \textbf{\textcolor{black}{Purdue}}}
-	\\
-	A custom STM32 PCB that took in MIDI input and synthesized audio output using an DAC. Features
-	included 10 Simultaneous notes, 5 distinct voices, pitch bending, volume adjustment, note fading and an
-	OLED display.
-\end{minipage}
-\begin{minipage}[t]{1\textwidth} % 40% of the page width for the introduction text
-	%\vspace{\baselineskip}
-	\textbf{Graphics Toolkit}
+	\textbf{Graphics Experiments}
 	\hfill% Horizontal whitespace
 	{\footnotesize \textbf{\textcolor{black}{Purdue \& Personal}}}
-	\\
-	A from-scratch complete graphics program with support for shadow maps, shaders,
-	billboard reflections, STL imports, as well as software and hardware rendering.
+	\begin{itemize}[noitemsep,topsep=0pt]
+		\setlength\itemsep{0pt}
+		\item[$\ast$]Built a from-scratch graphics program with support for shadow maps, shaders,
+		billboard reflections, STL imports, software and hardware rendering
+		\item[$\ast$]Experimented with Perlin noise as a compute shader for 2D water surface simulation
+	\end{itemize}
 \end{minipage}
 
 
@@ -218,34 +234,12 @@
 \begin{minipage}[t]{.48\textwidth}
 	\vspace{-\baselineskip}
 	\textbf{Applications/Utilities:}\\
-	\ttlist{Unity,Blender,KiCad,Illustrator,Photoshop,Notion,Microsoft Office,Git,AFL++}\\\\
+	\ttlist{Unity,Blender,KiCad,Illustrator,Photoshop,Notion,Microsoft Office,Git,AFL++,Vim/Neovim}\\\\
 	\textbf{Extra:}\\
 	\ttlist{Bread-boarding,Soldering}
 
 
 \end{minipage}
-
-
-
-\iffalse
-\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\begin{barchart}{5.5}
-		\baritem{JavaScript}{60}
-		\baritem{PHP}{100}
-		\baritem{SASS/LESS}{70}
-		\baritem{Bootstrap}{70}
-		\baritem{Git}{40}
-		\baritem{LaTeX}{60}
-	\end{barchart}
-\end{minipage}
-\fi
-
-\iffalse
-\begin{center}
-	\bubbles{5/Eclipse, 6/git, 4/Office, 3/Inkscape, 3/Blender}
-\end{center}
-\fi
 
 %----------------------------------------------------------------------------------------
 %	ADDITIONAL INFORMATION
