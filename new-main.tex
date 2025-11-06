@@ -1,0 +1,258 @@
+\documentclass[8pt]{extarticle} % default font size, values from 8-12pt are recommended
+
+\usepackage[hidelinks]{hyperref} % Required for links but hide the default boxes around links
+\usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[default]{raleway}
+\usepackage{fontawesome} % Required for FontAwesome icons
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{varwidth}
+\usepackage{calc}
+\usepackage{setspace}
+\input{glyphtounicode}
+
+\pdfgentounicode=1
+
+\setlength{\parindent}{0mm} % Suppress paragraph indentation
+
+\pagestyle{empty} % No headers or footers
+
+\geometry{
+	paper=a4paper, % Paper size, change to letterpaper for US letter size
+	top=.75cm, % Top margin
+	bottom=.75cm, % Bottom margin
+	left=.75cm, % Left margin
+	right=.75cm, % Right margin
+	headheight=0.75cm, % Header height
+	footskip=1cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.5cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+\renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
+
+\newlength{\tabspace}
+\setlength{\tabspace}{2ex}
+
+\newcommand{\semibold}[1]{{\fontseries{sb}\selectfont #1}}
+\newcommand{\standardspace}{.75cm}
+\newcommand{\icon}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	\vcenteredhbox{\colorbox{black}{\makebox(#2, #2){\textcolor{white}{\large\csname fa#1\endcsname}}}}% Icon and box
+	\hspace{1ex}% Whitespace
+	\vcenteredhbox{\textcolor{black}{#3}}% Text
+}
+\newcommand{\vcenteredhbox}[1]{% The only parameter is for the content to centre
+	\begingroup%
+		\setbox0=\hbox{#1}\parbox{\wd0}{\box0}%
+	\endgroup%
+}
+\newcommand{\sectionbreak}{
+    \vspace{2ex}
+}
+\newcommand{\smallsectionbreak}{
+    \vspace{.75ex}
+}
+\newcommand{\sectionheader}[1]{
+	\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{#1}}}}% Section title
+    \smallsectionbreak\\
+}
+\newcommand{\tripleheader}[3]{
+    \large\textbf{#1} -- \textit{#2}
+    \hfill
+    #3
+}
+\newcommand{\formatdate}[2]{
+    #1/\textbf{#2}
+}
+\newcommand{\formatdaterange}[4]{
+    \formatdate{#1}{#2} -- \formatdate{#3}{#4}
+}
+\newcommand{\presentdaterange}[2]{
+    \formatdate{#1}{#2} -- Present
+}
+\newcommand{\tab}{
+    \hspace*{\tabspace}
+}
+\newcommand{\dashedentry}[2]{
+    \textit{#1} -- {#2}
+}
+\newcommand{\fitcontentsection}[1]{
+    \begin{varwidth}{\linewidth}
+        #1
+    \end{varwidth}
+}
+\newcommand{\bulletlist}[2]{
+    \begin{itemize}[label=$\ast$, noitemsep, topsep=0ex, partopsep=0ex, leftmargin=4.5ex, labelwidth=0ex, labelsep=1ex]
+        \foreach \point in {#1} {
+            \item \point
+        }
+    \end{itemize}
+}
+\newcommand{\indentpar}[1]{
+    \parindent=0ex \hangindent=\tabspace \hangafter=0 \parskip=0ex
+	    #1
+    \par
+}
+\newcommand{\subheader}[1]{
+	\indentpar{\semibold{#1}}
+}
+\newcommand{\doublesubheader}[2]{
+	\tab\semibold{#1} -- \textit{#2}
+}
+\newcommand{\doublenoheader}[2]{
+	\semibold{#1} -- \textit{#2}
+}
+
+\begin{document}
+
+\setstretch{1.1}
+    
+% RESUME HEADER
+\fitcontentsection{
+    \vcenteredhbox{\colorbox{black}{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Jack Myers}}}}}
+    \smallsectionbreak\\
+    \vcenteredhbox{\huge www.jacktmyers.com}
+}
+\hfill
+\fitcontentsection{
+    \icon{Envelope}{12}{jthomasmmail@gmail.com}
+    \smallsectionbreak\\
+	\vcenteredhbox{\colorbox{white}{\makebox(12, 12){\textcolor{white}{\large}}}} %Empty Space
+}
+\fitcontentsection{
+    \icon{Phone}{12}{+1 317 205 5391}
+    \smallsectionbreak\\
+    \icon{MapMarker}{12}{Lafayette, IN}
+}
+
+\sectionbreak
+
+% WORK
+\sectionheader{Professional Experience}
+    \tripleheader{Naval Surface Warfare Center, Crane}{Civilian Computer Engineer}{\formatdaterange{07}{23}{05}{25}}
+        \bulletlist{
+            {Holding secret level security clearance},
+            {Created applications for over 3000 devices used by Marines worldwide},
+            {Leveraged agile software development strategies},
+            {Prototyped and implemented on-device LLM and RAG for summarizing technical publications},
+            {Wrote web scraping scripts to populate documents and metadata into a custom database},
+            {Maintained and supported custom asset tracking web app}
+        }
+
+    \smallsectionbreak
+
+    \tripleheader{Scientia LLC}{Software Development Intern}{\formatdaterange{05}{22}{09}{22}}
+
+	    \subheader{Ground Based Operational Surveillance Systems (GBOSS) Department of Defense Contract}
+        \bulletlist{
+            {Built light-weight frontend for sensor management on headless system},
+            {Collaborated, and implemented camera control driver for linux based operating system}
+        }
+
+\sectionbreak
+\sectionheader{Education}
+    \tripleheader{Purdue University, West Lafayette}{Computer Graphics Technology Master's}{\presentdaterange{08}{25}}
+        \bulletlist{
+            {AI for Computer Graphics Concentration},
+            {\doublenoheader{Thesis}{Realtime Digital Cedaver Lab with Visible Human Dataset}}
+        }
+
+    \smallsectionbreak
+
+    \tripleheader{Purdue University, West Lafayette}{Computer Engineering Bachelor's}{\formatdaterange{08}{19}{05}{23}}
+
+	    \doublesubheader{Digital Systems Lab Teaching Assistant}{4 Semesters}
+        \bulletlist{
+            {Helped students create and debug logic circuits and hardware description code},
+            {Expanded on lecture material and concepts when necessary}
+        }
+
+	    \doublesubheader{Undergraduate Research}{3 Semesters}
+        \bulletlist{
+            {Led a team to build, and deploy an automatic grading system for Purdue's advanced C course},
+            {Researched the implementation of a fuzzer for automatic advanced feedback on C assignments}
+        }
+
+	    \doublesubheader{Dean's List}{All Semesters} / \doublenoheader{Honors}{6 Semesters} / \doublenoheader{GPA}{3.66}
+
+\sectionbreak
+\sectionheader{Projects}
+    \tripleheader{Augmented Reality Research}{NSWC, Crane}{2024 - 2025}
+
+	    \subheader{Proof of Concept}
+        {\parindent=0ex \hangindent=2\tabspace \hangafter=0
+        Headset application built for HoloLens 2 and Magic Leap 2. Prototype incorporated 3D scan data for real-time 
+        object detection of specific hand-held tools and communicated with an external laptop through a USB connection. Collaborated 
+        between branchs to collect 3D detection dataset.
+        \par}
+
+        \subheader{Collaboration Between Military Branches}
+        \bulletlist{
+            {Traveled and communicated with Army, and Air Force at relevant test events},
+            {Discussed technical details and implementation steps for shared software},
+            {Adapted Army application to leverage connected laptop and quadruple framerate}
+        }
+
+        \subheader{Technical Communication}
+        \bulletlist{
+            {Presented prototype and modified Army application to customer to prove hardware capability},
+            {Documented research process in technical white paper and communicated results to a board of chief engineers}
+        }
+
+    \smallsectionbreak
+
+    \tripleheader{R.A.C.H.E.L.}{Purdue}{2022}
+
+		\indentpar{
+            Electronic ping-pong table that responds to ball bounces, tracks score and changes as you play.
+            Comprised of a STM32 Microcontroller, piezoelectric microphone array, RGB camera, linux laptop and projector.\\
+            \doublenoheader{Contributions}{Ball position detection, game logic, communication protocol, and user interface.}\\
+            \doublenoheader{Awards}{2022 Spark Challenge First Place, 2022-2023 Senior Design Award}
+        }
+
+    \smallsectionbreak
+    \tripleheader{Life Database}{Personal}{2025}
+
+    \indentpar{
+        Jetpack Compose Android application designed for the seamless input of any metric a user wishes to track.
+    }
+
+    \smallsectionbreak
+    \tripleheader{Graphics Expiriments}{Personal}{2024}
+        \bulletlist{
+		    {Experimented with Perlin noise as a compute shader for 2D water surface},
+		    {Built a program from scratch with support for shadow maps, shaders, billboard reflections, STL imports, software and hardware rendering}
+        }
+
+    \smallsectionbreak
+
+    \tripleheader{MIDI Polyphonic Synthesizer}{Purdue}{2021}
+
+		\indentpar{
+            A custom STM32 PCB that took in MIDI input and synthesized audio output using an DAC. Features
+            included 10 Simultaneous notes, 5 distinct voices, pitch bending, volume adjustment, note fading and an
+            OLED display.
+        }
+
+
+
+\sectionbreak
+\sectionheader{Skills}
+\semibold{Languages:} C++, C\#, C, Embedded C, JS, HTML, CSS, Python, Java, Bash, SystemVerilog, LaTeX, SQL, Kotlin
+
+\smallsectionbreak
+
+\semibold{Frameworks/Libraries:} Vue, MVC, OpenCV, Selenium, OpenGL, Jetpack Compose, OpenAI API
+
+\smallsectionbreak
+
+\semibold{Applications/Utilities:} Unity, Blender, Gimp, KiCad, Microsoft Office, Git
+
+
+
+\end{document}
