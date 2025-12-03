@@ -23,8 +23,8 @@
 
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=.75cm, % Top margin
-	bottom=.75cm, % Bottom margin
+	top=.5cm, % Top margin
+	bottom=.5cm, % Bottom margin
 	left=.75cm, % Left margin
 	right=.75cm, % Right margin
 	headheight=0.75cm, % Header height
@@ -122,41 +122,20 @@
 \fitcontentsection{
     \icon{Envelope}{12}{jthomasmmail@gmail.com}
     \smallsectionbreak\\
+    \icon{MapMarker}{12}{Lafayette, IN}
 	\vcenteredhbox{\colorbox{white}{\makebox(12, 12){\textcolor{white}{\large}}}} %Empty Space
 }
 \fitcontentsection{
     \icon{Phone}{12}{+1 317 205 5391}
     \smallsectionbreak\\
-    \icon{MapMarker}{12}{Lafayette, IN}
+    \href{https://www.linkedin.com/in/jack-myers-aab6811b6/}{\icon{Linkedin}{12}{Linkedin}}
 }
 
 \sectionbreak
 
-% WORK
-\sectionheader{Professional Experience}
-    \tripleheader{Naval Surface Warfare Center, Crane}{Civilian Computer Engineer}{\formatdaterange{07}{23}{05}{25}}
-        \bulletlist{
-            {Holding secret level security clearance},
-            {Created applications for over 3000 devices used by Marines worldwide},
-            {Leveraged agile software development strategies},
-            {Prototyped and implemented on-device LLM and RAG for summarizing technical publications},
-            {Wrote web scraping scripts to populate documents and metadata into a custom database},
-            {Maintained and supported custom asset tracking web app}
-        }
-
-    \smallsectionbreak
-
-    \tripleheader{Scientia LLC}{Software Development Intern}{\formatdaterange{05}{22}{09}{22}}
-
-	    \subheader{Ground Based Operational Surveillance Systems (GBOSS) Department of Defense Contract}
-        \bulletlist{
-            {Built light-weight frontend for sensor management on headless system},
-            {Collaborated, and implemented camera control driver for linux based operating system}
-        }
-
-\sectionbreak
+%Education
 \sectionheader{Education}
-    \tripleheader{Purdue University, West Lafayette}{Computer Graphics Technology Master's}{\presentdaterange{08}{25}}
+    \tripleheader{Computer Graphics Technology Master's}{Purdue University, West Lafayette}{\formatdaterange{08}{25}{05}{27}}
         \bulletlist{
             {AI for Computer Graphics Concentration},
             {\doublenoheader{Thesis}{Realtime Digital Cedaver Lab with Visible Human Dataset}}
@@ -164,21 +143,43 @@
 
     \smallsectionbreak
 
-    \tripleheader{Purdue University, West Lafayette}{Computer Engineering Bachelor's}{\formatdaterange{08}{19}{05}{23}}
-
-	    \doublesubheader{Digital Systems Lab Teaching Assistant}{4 Semesters}
-        \bulletlist{
-            {Helped students create and debug logic circuits and hardware description code},
-            {Expanded on lecture material and concepts when necessary}
-        }
-
-	    \doublesubheader{Undergraduate Research}{3 Semesters}
-        \bulletlist{
-            {Led a team to build, and deploy an automatic grading system for Purdue's advanced C course},
-            {Researched the implementation of a fuzzer for automatic advanced feedback on C assignments}
-        }
+    \tripleheader{Computer Engineering Bachelor's}{Purdue University, West Lafayette}{\formatdaterange{08}{19}{05}{23}}
 
 	    \doublesubheader{Dean's List}{All Semesters} / \doublenoheader{Honors}{6 Semesters} / \doublenoheader{GPA}{3.66}
+
+\sectionbreak
+
+% WORK
+\sectionheader{Professional Experience}
+    \tripleheader{Naval Surface Warfare Center, Crane}{Civilian Computer Engineer}{\formatdaterange{07}{23}{05}{25}}
+        \bulletlist{
+            {Maintained security clearance for proper handling of secret materials},
+            {Developed software applications deployed to 3000 laptops and used by Marines worldwide},
+            {Improved and re-designed internal web application used to track deployed systems},
+            {Prototyped and implemented local LLM and RAG for summarizing large technical publications offline},
+            {Maintained internal web scraping and database tool to manage and update thousands of documents automatically}
+        }
+
+    \smallsectionbreak
+
+    \tripleheader{Scientia LLC}{Software Development Intern}{\formatdaterange{05}{22}{09}{22}}
+        \bulletlist{
+            {Built light-weight web-app for sensor management on headless surveillance system},
+            {Collaborated, and implemented camera driver in custom Linux operating system to test for hardware compatibility}
+        }
+
+    \tripleheader{Purdue}{Digital Systems Lab Teaching Assistant}{\formatdaterange{08}{21}{05}{23}}
+    \bulletlist{
+        {Instructed students on how to create and debug logic circuits and hardware description code},
+        {Expanded on lecture material and fundamental concepts to increase student comprehension}
+    }
+
+    \tripleheader{Purdue}{Undergraduate Research}{\formatdaterange{01}{21}{12}{21}}
+    \bulletlist{
+        {Led a team to build, and deploy an automatic grading system leveraging Github’s API for use in advanced C course},
+        {Researched the implementation of a fuzzer for automatic advanced feedback on studnet coding assignments}
+    }
+
 
 \sectionbreak
 \sectionheader{Projects}
@@ -195,7 +196,7 @@
         \bulletlist{
             {Traveled and communicated with Army, and Air Force at relevant test events},
             {Discussed technical details and implementation steps for shared software},
-            {Adapted Army application to leverage connected laptop and quadruple framerate}
+            {Adapted Army application to integrate with connected laptop and quadruple framerate}
         }
 
         \subheader{Technical Communication}
@@ -206,7 +207,7 @@
 
     \smallsectionbreak
 
-    \tripleheader{R.A.C.H.E.L.}{Purdue}{2022}
+    \tripleheader{\href{https://www.jacktmyers.com/engineering/rachel/}{R.A.C.H.E.L.}}{Purdue}{2022}
 
 		\indentpar{
             Electronic ping-pong table that responds to ball bounces, tracks score and changes as you play.
@@ -216,18 +217,18 @@
         }
 
     \smallsectionbreak
-    \tripleheader{Life Database}{Personal}{2025}
-
-    \indentpar{
-        Jetpack Compose Android application designed for the seamless input of any metric a user wishes to track.
-    }
-
-    \smallsectionbreak
     \tripleheader{Graphics Expiriments}{Personal}{2024}
         \bulletlist{
-		    {Experimented with Perlin noise as a compute shader for 2D water surface},
-		    {Built a program from scratch with support for shadow maps, shaders, billboard reflections, STL imports, software and hardware rendering}
+		    {Implemented Perlin noise as a compute shader for 2D water surface},
+		    {Developed program from scratch with support for shadow maps, shaders, billboard reflections, STL imports, software and hardware rendering}
         }
+
+    \smallsectionbreak
+    \tripleheader{Life Database}{Personal}{2025}
+    \bulletlist{
+        {Designed android application from scratch for custom and quick data input},
+        {Prototyped dashboard for custom input widgets to increase usability}
+    }
 
     \smallsectionbreak
 
@@ -253,6 +254,8 @@
 
 \semibold{Applications/Utilities:} Unity, Blender, Gimp, KiCad, Microsoft Office, Git
 
+\sectionbreak
+\colorbox{black}{\textcolor{white}{\MakeUppercase{\textbf{Hobbies}}}} - Snowboarding, Jewlery Making, Dungeons \& Dragons, Cooking, Boardgames, Running, Swimming
 
 
 \end{document}
